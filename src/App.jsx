@@ -1,12 +1,18 @@
-import { Container } from 'react-bootstrap';
 import NavBar from './components/common/Nav'
 import "bootstrap/dist/css/bootstrap.min.css";
+import Inicio from './components/views/Inicio';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Container>
+    <section >
+      <BrowserRouter>
       <NavBar></NavBar>
-    </Container>
+      <Routes>
+          <Route exact path="/" element={<Inicio></Inicio>}></Route>
+      </Routes>
+      </BrowserRouter>
+    </section>
   );
 }
 
