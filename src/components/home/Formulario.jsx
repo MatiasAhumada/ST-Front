@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { crearServicio } from "../helpers/queris";
+//import { crearServicio } from "../helpers/queris";
 
 const Formulario = () => {
   const {
@@ -19,7 +19,7 @@ const Formulario = () => {
   } = useForm();
   const navegacion = useNavigate();
   const onSubmit = (datos) => {
-    crearServicio(datos).then((respuesta) => {
+    /*crearServicio(datos).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire(
           "Usuario creado",
@@ -31,7 +31,7 @@ const Formulario = () => {
       } else {
         Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
       }
-    });
+    });*/
   };
 
   return (
@@ -44,33 +44,32 @@ const Formulario = () => {
           <Form.Control placeholder="Cliente" type="text" className="mb-3" />
         </FormGroup>
 
-        <Form.Label htmlFor="basic-url" className="text-light">
-          Numero de contacto
-        </Form.Label>
-        <InputGroup className="mb-3">
-          <InputGroup.Text id="basic-addon2">+54</InputGroup.Text>
-          <Form.Control placeholder="Numero" type="number" />
-        </InputGroup>
-
+        <FormGroup>
+          <Form.Label htmlFor="basic-url" className="text-light">
+            Numero de contacto
+          </Form.Label>
+          <Form.Text id="basic-addon2">+54</Form.Text>
+          <Form.Control placeholder="Numero" type="number" className="mb-3" />
+        </FormGroup>
         <Form.Label htmlFor="basic-url" className="text-light">
           Descripcion de fallas
         </Form.Label>
         <InputGroup>
-          <Form.Control as="textarea" aria-label="With textarea" />
+          <Form.Control as="textarea" aria-label="With textarea" type="text" />
         </InputGroup>
 
         <Form.Label htmlFor="basic-url" className="text-light">
           Descripcion de Presupuesto
         </Form.Label>
         <InputGroup>
-          <Form.Control as="textarea" aria-label="With textarea" />
+          <Form.Control as="textarea" aria-label="With textarea" type="text" />
         </InputGroup>
         <Form.Label htmlFor="basic-url" className="text-light">
           Seña $
         </Form.Label>
         <InputGroup className="mb-3">
           <InputGroup.Text>$</InputGroup.Text>
-          <Form.Control aria-label="Monto" placeholder="Monto" />
+          <Form.Control aria-label="Monto" placeholder="Monto" type="number" />
           <InputGroup.Text>.00</InputGroup.Text>
         </InputGroup>
 
@@ -79,7 +78,7 @@ const Formulario = () => {
         </Form.Label>
         <InputGroup className="mb-3">
           <InputGroup.Text>$</InputGroup.Text>
-          <Form.Control aria-label="Monto" placeholder="Monto" />
+          <Form.Control aria-label="Monto" placeholder="Monto" type="number" />
           <InputGroup.Text>.00</InputGroup.Text>
         </InputGroup>
         <Button variant="primary" type="submit">
