@@ -1,12 +1,33 @@
 {
-    "servicios":[
+    "Equipos":[
         {
+            "id":1,
             "nombreCliente":"matias",
             "numero":"3813528658",
             "fallas":"no anda touch",
             "dpresupuesto":"cambio de touch",
-            "sena":"100",
-            "presupuesto":"1000"
+            "sena":100,
+            "presupuesto":1000
+
+        },
+        {
+            "id":2,
+            "nombreCliente":"lucas",
+            "numero":"3813528658",
+            "fallas":"no anda touch",
+            "dpresupuesto":"cambio de touch",
+            "sena":100,
+            "presupuesto":1000
+
+        },
+        {
+            "id":3,
+            "nombreCliente":"bernardo",
+            "numero":"3813528658",
+            "fallas":"no anda touch",
+            "dpresupuesto":"cambio de touch",
+            "sena":100,
+            "presupuesto":1000
 
         }
     ]
