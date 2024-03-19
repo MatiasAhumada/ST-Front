@@ -1,4 +1,4 @@
-const URLPedidos= 
+/*const URLPedidos= 
 
 export const crearServicio= async (usuario) => {
     try {
@@ -14,4 +14,4 @@ export const crearServicio= async (usuario) => {
       console.log(error);
       return;
     }
-  };
+  };*/

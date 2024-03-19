@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { crearServicio } from "../helpers/queris";
+//import { crearServicio } from "../helpers/queris";
 
 const Formulario = () => {
   const {
@@ -19,7 +19,8 @@ const Formulario = () => {
   } = useForm();
   const navegacion = useNavigate();
   const onSubmit = (datos) => {
-    crearServicio(datos).then((respuesta) => {
+    console.log(datos);
+ /*   crearServicio(datos).then((respuesta) => {
       if (respuesta.status === 201) {
         Swal.fire(
           "Usuario creado",
@@ -31,7 +32,7 @@ const Formulario = () => {
       } else {
         Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
       }
-    });
+    });*/
   };
 
   return (
